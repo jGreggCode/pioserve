@@ -3,8 +3,14 @@ import BottomNav from "../components/shared/BottomNav";
 import BackButton from "../components/shared/BackButton";
 import MenuContainer from "../components/menu/MenuContainer";
 import { MdRestaurantMenu } from "react-icons/md";
+import CustomerInfo from "../components/menu/CustomerInfo";
+import CartInfo from "../components/menu/CartInfo";
+import Bill from "../components/menu/Bill";
+import { useSelector } from "react-redux";
 
 const Menu = () => {
+  const customerData = useSelector((state) => state.customer);
+
   return (
     <section className="bg-[#1f1f1f] h-[calc(100vh-5rem)] overflow-hidden flex gap-3">
       {/* LEFT DIVISION */}
@@ -21,9 +27,11 @@ const Menu = () => {
               <MdRestaurantMenu className="text-[#f5f5f5] text-2xl" />
               <div className="flex flex-col items-start">
                 <h1 className="text-md text-[#f5f5f5] font-semibold tracking-wide">
-                  Customer Name
+                  {customerData.customerName || "Customer Name"}
                 </h1>
-                <p className="text-xs text-[#ababab]">Table No: 2</p>
+                <p className="text-xs text-[#ababab]">
+                  {customerData.tableNo || "Table No"}
+                </p>
               </div>
             </div>
           </div>
@@ -32,7 +40,16 @@ const Menu = () => {
         <MenuContainer />
       </div>
       {/* RIGHT DIVISION */}
-      <div className="flex-[1]"></div>
+      <div className="flex-[1] bg-[#1a1a1a] mt-4 mr-3 h-[780px] rounded-lg pt-2">
+        {/* CUSTOMER INFO */}
+        <CustomerInfo />
+        <h4 className="border-[#2a2a2a} border-t-2"></h4>
+        {/* CART ITEMS */}
+        <CartInfo />
+        <h4 className="border-[#2a2a2a} border-t-2"></h4>
+        {/* BILLS */}
+        <Bill />
+      </div>
 
       <BottomNav />
     </section>

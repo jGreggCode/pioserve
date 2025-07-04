@@ -91,6 +91,15 @@ export const tables = [
   { id: 15, name: "Table 15", status: "Booked", initial: "TW", seats: 3 },
 ];
 
+export const hotBeverages = [
+  { id: 1, name: "Espresso", price: 90, category: "Coffee Based" },
+  { id: 2, name: "Espresso con Panna", price: 108, category: "Coffee Based" },
+  { id: 3, name: "Espresso Machiatto", price: 108, category: "Coffee Based" },
+  { id: 4, name: "Americano", price: 108, category: "Coffee Based" },
+  { id: 5, name: "Cappucino", price: 128, category: "Coffee Based" },
+  { id: 6, name: "Cafe Latte", price: 148, category: "Coffee Based" },
+];
+
 export const startersItem = [
   {
     id: 1,
@@ -370,59 +379,72 @@ export const menus = [
   {
     id: 1,
     name: "Hot Beverages",
-    bgColor: "#b73e3e",
+    bgColor: "#DC143C",
     icon: "",
-    items: startersItem,
+    items: hotBeverages,
   },
   {
     id: 2,
     name: "Cold Beverages",
-    bgColor: "#5b45b0",
+    bgColor: "#E0115F",
     icon: "",
     items: mainCourse,
   },
   {
     id: 3,
     name: "Juices & Shakes",
-    bgColor: "#7f167f",
+    bgColor: "#FF6F61",
     icon: "",
     items: beverages,
   },
-  { id: 4, name: "Starters", bgColor: "#735f32", icon: "", items: soups },
-  { id: 5, name: "Salads", bgColor: "#1d2569", icon: "", items: desserts },
+  { id: 4, name: "Alcohol Drinks", bgColor: "#FA8072", icon: "", items: soups },
+  { id: 5, name: "Cocktails", bgColor: "#FF7034", icon: "", items: desserts },
   {
     id: 6,
-    name: "Cold Cuts & Cheese",
-    bgColor: "#285430",
+    name: "Desserts",
+    bgColor: "#DAA520",
     icon: "",
     items: pizzas,
   },
   {
     id: 7,
-    name: "Alcohol Drinks",
-    bgColor: "#b73e3e",
+    name: "Starters",
+    bgColor: "#FFBF00",
     icon: "",
     items: alcoholicDrinks,
   },
-  { id: 8, name: "Cocktails", bgColor: "#5b45b0", icon: "", items: salads },
-  { id: 9, name: "Pastas", bgColor: "#5b45b0", icon: "", items: salads },
-  { id: 10, name: "Paellas", bgColor: "#5b45b0", icon: "", items: salads },
+  { id: 8, name: "Salads", bgColor: "#5b45b0", icon: "", items: salads },
+  {
+    id: 9,
+    name: "Cold Cuts & Cheese",
+    bgColor: "#FFDB58",
+    icon: "",
+    items: salads,
+  },
+  { id: 10, name: "Pastas", bgColor: "#FBCEB1", icon: "", items: salads },
   {
     id: 11,
-    name: "Pizza Neopolitan",
-    bgColor: "#5b45b0",
+    name: "Paellas",
+    bgColor: "#E2725B",
     icon: "",
     items: salads,
   },
   {
     id: 12,
-    name: "Pizza Romana",
-    bgColor: "#5b45b0",
+    name: "Pizza Neopolitan",
+    bgColor: "#A4C639",
     icon: "",
     items: salads,
   },
-  { id: 13, name: "Sandwich", bgColor: "#5b45b0", icon: "", items: salads },
-  { id: 14, name: "Mains", bgColor: "#5b45b0", icon: "", items: salads },
+  {
+    id: 13,
+    name: "Pizza Romana",
+    bgColor: "#98FF98",
+    icon: "",
+    items: salads,
+  },
+  { id: 14, name: "Sandwich", bgColor: "#FFDAB9", icon: "", items: salads },
+  { id: 15, name: "Mains", bgColor: "#F7E7CE", icon: "", items: salads },
 ];
 
 export const metricsData = [

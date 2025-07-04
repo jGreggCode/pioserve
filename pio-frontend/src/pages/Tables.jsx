@@ -7,7 +7,7 @@ import { tables } from "../constants";
 const Tables = () => {
   const [status, setStatus] = useState("all");
   return (
-    <section className="bg-dark h-[calc(100vh-5rem)] overflow-hidden">
+    <section className="bg-dark h-[calc(100vh-5rem)]  overflow-hidden">
       <div className="flex items-center justify-between px-10 py-4">
         <div className="flex items-center gap-4">
           <BackButton />
@@ -43,10 +43,12 @@ const Tables = () => {
               name={table.name}
               status={table.status}
               initials={table.initial}
+              seats={table.seats}
             />
           );
         })}
       </div>
+
       <BottomNav />
     </section>
   );

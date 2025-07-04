@@ -1,18 +1,22 @@
 import React from "react";
 import { FaCheckDouble } from "react-icons/fa";
-import { getRandomBG } from "../../utils";
+import { getBgColor } from "../../utils";
 import { useNavigate } from "react-router-dom";
+import { useDispatch } from "react-redux";
+import { updateTable } from "../../redux/slices/customerSlice";
 
-const TableCard = ({ name, status, initials }) => {
+const TableCard = ({ name, status, initials, seats }) => {
+  const dispatch = useDispatch();
   const navigate = useNavigate();
-  const handleClick = () => {
+  const handleClick = (name) => {
     if (status === "Booked") return;
+    dispatch(updateTable({ tableNo: name }));
     navigate("/menu");
   };
 
   return (
     <div
-      onClick={handleClick}
+      onClick={() => handleClick(name)}
       className="w-[300px] hover:bg-[#1f1f1f] bg-[#2c2c2c] p-4 rounded-lg mb-4 cursor-pointer"
     >
       <div className="flex items-center justify-between px-1">
@@ -29,10 +33,16 @@ const TableCard = ({ name, status, initials }) => {
         </p>
       </div>
       <div className="flex items-center justify-center mt-5 mb-9">
-        <h1 className={`${getRandomBG()} text-white rounded-full p-5 text-xl`}>
+        <h1
+          className={`text-white rounded-full p-5 text-xl`}
+          style={{ backgroundColor: getBgColor() }}
+        >
           {initials}
         </h1>
       </div>
+      <p className="text-[#ababab] text-xs">
+        Seats: <span className="text-[#f5f5f5]">{seats}</span>
+      </p>
     </div>
   );
 };
