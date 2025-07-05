@@ -16,14 +16,14 @@ const RecentOrders = () => {
         </div>
 
         {/* Search */}
-        <div className="flex items-center gap-4 bg-[#1f1f1f] p-2 rounded-[15px] px-6 py-4 mx-6">
+        {/* <div className="flex items-center gap-4 bg-[#1f1f1f] p-2 rounded-[15px] px-6 py-4 mx-6">
           <FaSearch className="text-[#f5f5f5]" />
           <input
             type="text"
             placeholder="Search recent orders"
             className="bg-[#1f1f1f] outline-none text-[#f5f5f5] px-2 py-1 rounded-md"
           />
-        </div>
+        </div> */}
 
         {/* Order list */}
         <div className="mt-4 px-6 overflow-y-scroll h-[300px] scrollbar-hide">

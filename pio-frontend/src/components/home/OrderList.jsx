@@ -4,7 +4,7 @@ import { FaCheckDouble, FaCircle } from "react-icons/fa";
 const OrderList = () => {
   return (
     <div className="flex items-center gap-5 mb-3">
-      <button className="bg-[#f6b100] p-3 text-xl font-bold rounded-lg">
+      <button className="bg-primary p-3 text-xl font-bold rounded-lg">
         AM
       </button>
       <div className="flex items-center justify-between w-[1000%]">
@@ -15,7 +15,7 @@ const OrderList = () => {
           <p className="text-[#ababab] text-sm">3 Items</p>
         </div>
         <div>
-          <h1 className="text-[#f6b100] font-semibold border border-[#f6b100] rounded-lg p-1">
+          <h1 className="text-primary font-semibold border border-primary rounded-lg p-1">
             Table No: 3
           </h1>
         </div>

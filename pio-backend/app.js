@@ -4,12 +4,19 @@ const connectDB = require("./config/database");
 const config = require("./config/config");
 const globalErrorHandler = require("./middlewares/globalErrorHandler");
 const cookieParser = require("cookie-parser");
+const cors = require("cors");
 const app = express();
 
 const PORT = config.port || 8000;
 connectDB();
 
 // Middleware
+app.use(
+  cors({
+    credentials: true, // Allow credentials (cookies, authorization headers, etc.)
+    origin: config.clientUrl, // Allow requests from the client URL
+  })
+);
 app.use(express.json());
 app.use(cookieParser());
 
