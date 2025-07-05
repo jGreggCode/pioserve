@@ -10,6 +10,7 @@ import { logout } from "../../https"; // Adjust the import path as necessary
 import { useDispatch } from "react-redux";
 import { removeUser } from "../../redux/slices/userSlice"; // Adjust the import path as necessary
 import { useNavigate } from "react-router-dom"; // Ensure you have this import
+import { MdDashboard } from "react-icons/md";
 
 const Header = () => {
   const userData = useSelector((state) => state.user);
@@ -50,6 +51,14 @@ const Header = () => {
 
       {/* LOGGED USER DETAILS */}
       <div className="flex items-center gap-4">
+        {userData.role === "Admin" && (
+          <div
+            onClick={() => navigate("/dashboard")}
+            className="bg-[#1f1f1f] rounded-[15px] p-3 cursor-pointer "
+          >
+            <MdDashboard className="text-[#f5f5f5] text-2xl" />
+          </div>
+        )}
         <div className="bg-[#1f1f1f] rounded-[15px] p-3 cursor-pointer ">
           <FaBell className="text-[#f5f5f5] text-2xl" />
         </div>
