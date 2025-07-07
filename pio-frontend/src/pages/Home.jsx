@@ -17,14 +17,14 @@ const Home = () => {
           <MiniCard
             title="Total Earnings"
             icon={<BsCashCoin />}
-            number={10000}
+            number={34785}
             footerNum={1.6}
           />
           <MiniCard
             title="In Progress"
             icon={<GrInProgress />}
-            number={16}
-            footerNum={3.6}
+            number={0}
+            footerNum={0}
           />
         </div>
         <RecentOrders />

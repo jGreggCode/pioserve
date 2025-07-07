@@ -27,7 +27,10 @@ const RecentOrders = () => {
 
         {/* Order list */}
         <div className="mt-4 px-6 overflow-y-scroll h-[300px] scrollbar-hide">
-          <OrderList />
+          {/* <OrderList /> */}
+          <div className="flex justify-center items-center h-full text-[#f5f5f5]">
+            No orders yet
+          </div>
         </div>
       </div>
     </div>

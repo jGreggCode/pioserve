@@ -28,6 +28,7 @@ app.get("/", (req, res) => {
 app.use("/api/user", require("./routes/userRoute"));
 app.use("/api/order", require("./routes/orderRoutes"));
 app.use("/api/table", require("./routes/tableRoutes"));
+app.use("/api/dish", require("./routes/dishRoutes"));
 
 // Global Error Handler
 app.use(globalErrorHandler);

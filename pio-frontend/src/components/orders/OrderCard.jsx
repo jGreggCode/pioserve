@@ -5,8 +5,8 @@ const OrderCard = () => {
   return (
     <div className="w-full sm:w-[90%] md:w-[48%] lg:w-[32%] bg-[#262626] p-4 rounded-lg mb-4">
       <div className="flex items-center gap-5">
-        <button className="bg-[#f6b100] p-3 text-xl font-bold rounded-lg">
-          AM
+        <button className="bg-primary p-3 text-xl font-bold rounded-lg">
+          JG
         </button>
         <div className="flex items-center justify-between flex-1">
           <div className="flex flex-col items-start gap-1">

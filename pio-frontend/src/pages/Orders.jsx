@@ -52,24 +52,6 @@ const Orders = () => {
 
       <div className="flex flex-wrap gap-4 px-4 sm:px-6 md:px-10 py-4 overflow-y-auto scrollbar-hide h-[calc(100vh-5rem-5rem)]">
         <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
-        <OrderCard />
       </div>
       <BottomNav />
     </div>
